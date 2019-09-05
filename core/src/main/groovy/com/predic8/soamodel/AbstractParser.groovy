@@ -27,9 +27,9 @@ abstract class AbstractParser{
 
 	def resourceResolver = new ExternalResolver()
 
-	
-		protected parse(AbstractParserContext ctx) {
+	protected parse(AbstractParserContext ctx) {
 		updatectx(ctx)
+		updateResolver(ctx)
 		log.debug("AbstractParser: ctx.newBaseDir: ${ctx.newBaseDir} , ctx.input: " + ctx.input)
 		log.debug("parsing " + ctx.input + " input from baseDir: ${ctx.baseDir}")
 		parseLocal(getResourceToken(ctx), ctx)
@@ -41,6 +41,10 @@ abstract class AbstractParser{
 		ctx.resourceResolver = ctx.resourceResolver ?: resourceResolver
 		ctx.wsiResults = ctx.wsiResults ?: []
 		ctx.errors = ctx.errors ?: []
+	}
+
+	private updateResolver(ctx) {
+		resourceResolver = ctx.resourceResolver ?: resourceResolver
 	}
 
 	private getResourceToken(ctx) {

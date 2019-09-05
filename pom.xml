@@ -4,16 +4,17 @@
 
 	<groupId>com.predic8</groupId>
 	<artifactId>soa-model-parent</artifactId>
-	<version>1.6.0</version>
+	<version>1.6.1-FIX</version>
 	<packaging>pom</packaging>
 
 	<name>soa-model-parent</name>
-	<description>Membrane SOA Model is an open-source toolkit and Java API for WSDL and XML Schema, licensed under ASF 2.0. that can:
-
-Parse, create or modify a WSDL or XML Schema Document from Java
-Compare two WSDL or XML Schema Documents
-Create a SOAP Request or Template
-Analyze a WSDL or Schema document and generate an HMTL report</description>
+	<description>
+		Membrane SOA Model is an open-source toolkit and Java API for WSDL and XML Schema, licensed under ASF 2.0. that can:
+		Parse, create or modify a WSDL or XML Schema Document from Java
+		Compare two WSDL or XML Schema Documents
+		Create a SOAP Request or Template
+		Analyze a WSDL or Schema document and generate an HMTL report
+	</description>
 	<url>https://github.com/membrane/soa-model</url>
 
 	<licenses>
